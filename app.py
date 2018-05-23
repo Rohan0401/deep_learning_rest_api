@@ -1,5 +1,5 @@
 import logging.config
-
+import os
 import settings
 import utils
 
@@ -12,7 +12,10 @@ app = Flask (__name__)
 
 # Load logging configuration and create log object
 
-logging.config.fileConfig ('logging.conf')
+
+file_dir = os.path.split(os.path.realpath(__file__))[0]
+logging.config.fileConfig(os.path.join(file_dir, 'logging.conf'),
+                          disable_existing_loggers=False)
 log = logging.getLogger (__name__)
 
 
