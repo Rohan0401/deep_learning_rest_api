@@ -1,0 +1,9 @@
+.DS_Store
+
+checkpoints*/
+data/
+__pycache__/
+export/
+.vscode/
+*.pkl
+.idea/
